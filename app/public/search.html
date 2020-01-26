@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey</title>
+
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"></link>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="text-center">
+                <h1>Friend Finder</h1>
+                <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Survey -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Provide Details for Location</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-6">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Customer Name</label>
+                                        <input type="text" class="form-control" id="customerName" value="Sunrise Bank" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Latitude</label>
+                                        <input type="text" class="form-control" id="latitude" value="30.3534585" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Longitude</label>
+                                        <input type="text" class="form-control" id="longitude" value="-97.7249686" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Number of Locations</label>
+                                        <input type="text" class="form-control" id="numberOfLocations" value="200" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Type (bank, atm, or all)</label>
+                                        <input type="text" class="form-control" id="locationType" value="atm">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Output Type</label>
+                                        <input type="text" class="form-control" id="outputType" value="json">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Language</label>
+                                        <input type="text" class="form-control" id="language" value="English">
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary submit">Submit</button>
+                            </form>
+                        </div><!-- column -->
+                        <div class="col-lg-6">
+                            <div id="returnedData">
+                            Results: <span id="resultCount"> 0</span>
+                                <div class="dataOnLocations overflow-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--Panel body-->
+
+                </div><!--Panel-->
+            </div><!--row-->
+        </div><!--container-->
+        <!-- <footer class="footer">
+          <div class="container">
+            <p><a href="/api/friends">API Friends List</a></p>
+          </div>
+        </footer> -->
+    </body>
+</html>
+<script type="text/javascript" src="../js/search.js"></script>
